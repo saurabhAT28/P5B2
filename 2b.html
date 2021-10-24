@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min-max of an array</title>
+</head>
+<body>
+    <header>
+        <section>
+            <p>
+                <h2>
+                    Code in C++ language that can find minimum and maximum number present in an array.
+                </h2>
+            </p>
+        </section>       
+    </header>
+
+    <main>
+        <p><b>Sample code</b></p>
+        <pre>
+            <code>
+                #include < bits/stdc++.h >
+                using namespace std;
+
+                typedef long long ll;
+
+                int main(){
+                    int n;
+                    cout<<"Enter the size of an array: ";
+                    cin>>n;
+                    vector < int > v(n);
+
+                    for(int i=0;i < n; i++){
+                        cin>>v[i];
+                    }
+
+                    sort(v.begin(),v.end());
+
+                    cout << " Maximum element: " << v[n-1] << "\n";
+                    cout << "Minimum element: " << v[0] << "\n";
+
+                    return 0;
+                }
+            </code>
+            <em>
+                <p>Sample Input:</p>
+                Enter the size of an element: 5 
+                13 24 14 56 1
+                <p>Sample Output:</p>
+                Maximum element: 56
+                Minimum element: 1
+            </em>
+        </pre>
+        <em>
+        <p>Variables Uesd in the program:</p>
+            <var>n</var> as the total number of elements.
+            <br>
+            <var>v</var> as the vector.    
+        </em>
+    </main>
+    
+    <p>Time Complexity:
+        <br>
+        We are using inbuilt sort function.
+        <li>
+            Time complexity in Best Case: O(<kbd>n * log n</kbd>).
+            <br>
+            Where n=size of vector
+        </li>
+    </p>
+    <br>
+    <p>Space Complexity:
+        <br>
+        We are using vector for storing value O(<kbd>n</kbd>).
+        <br>
+        Where n=size of vector
+    </p>
+    <br>
+    <p>Link for the references</p>
+    <nav>|
+        <a href="https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/">geeksforgeeks</a>
+        <a href="https://www.techiedelight.com/find-minimum-maximum-element-array-using-minimum-comparisons/">techiedelight</a>
+    </nav>
+</body>
+</html>
